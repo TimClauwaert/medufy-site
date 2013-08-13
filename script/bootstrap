@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+# Set up environment. Run this script immediately after cloning the codebase.
+
+# Set up dependencies
+bundle install
+
+# Set up bourbon
+cd assets/sass/
+bourbon install
+
+# Set up neat
+neat install

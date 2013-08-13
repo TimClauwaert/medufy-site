@@ -1,0 +1,16 @@
+# Permalinks
+permalink: pretty
+
+# Server
+exclude: [".gitignore", "Gemfile", "Gemfile.lock", "README.md", "LICENSE.md", "sass", "script"]
+
+# Meta
+og:
+  image: path/to/img
+  title: title
+  url: url
+  name: name
+  description: description
+
+google:
+  ua: XXXXX-X

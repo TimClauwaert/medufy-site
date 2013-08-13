@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* px fallback font for rem */
+
+@mixin font-size($val) {
+  font-size: ($val * 10) + px;
+  font-size: $val + rem;
+}
+
+/* Handling breakpoints for media queries */
+
+@mixin breakpoint($point) {
+  // Small screen / tablets
+  @if $point == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content
+    }
+  }
+  // Medium screen / desktop
+  @else if $point == medium {
+    @media (min-width: 992px) {
+      @content
+    }
+  }
+  // Lardge screen / wide desktop
+  @else if $point == large {
+    @media (min-width: 1200px) {
+      @content
+    }
+  }
+}
+
+/* Handling images for Retina, example: +at2x(name-image, 20px, 20px) */
+
+@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') {
+  background-image: image-url($image_name + $extention);
+  $x2img : $image_name + '@2x' + $extention;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: image-url($x2img);
+    background-size: $w $h;
+  }
+}
+
+/* Clearfix */
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

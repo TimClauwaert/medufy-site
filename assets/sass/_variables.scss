@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* Layout */
+
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+
+/* Colors */
+
+$black: #000;
+$grayDarker: #222;
+$grayDark: #333;
+$gray: #555;
+$grayLight: #999;
+$grayLighter: #eee;
+$white: #fff;
+
+$colorLight: #53b3ef;
+$color: #53b3ef;
+$colorDark: #236187;
+
+/* Typography */
+
+$baseFontSize: 14px;
+$baseLineHeight: 1.42857142857; // 20/14
+$BaseLineHeightComputed: floor($baseFontSize * $baseLineHeight);
+$fontFamily: sans-serif;
+$fontFamilySerif: serif;
