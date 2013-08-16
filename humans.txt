@@ -3,8 +3,5 @@
 
 # TEAM
 
-  <name> - <twitter>
+  Typework - @typework
 
-# TECHNOLOGY COLOPHON
-
-  <technology>

@@ -16,6 +16,7 @@ $grayDark: #333;
 $gray: #555;
 $grayLight: #999;
 $grayLighter: #eee;
+$grayLightest: lighten($grayLighter, 7%);
 $white: #fff;
 
 $colorLight: #53b3ef;
@@ -27,5 +28,5 @@ $colorDark: #236187;
 $baseFontSize: 14px;
 $baseLineHeight: 1.42857142857; // 20/14
 $BaseLineHeightComputed: floor($baseFontSize * $baseLineHeight);
-$fontFamily: sans-serif;
+$fontFamily: Proxima Nova, sans-serif;
 $fontFamilySerif: serif;
