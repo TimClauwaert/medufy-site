@@ -69,3 +69,21 @@ input.button {
     color: $white;
   }
 }
+
+@include breakpoint(small) {
+  input.email {
+    width: 90%;
+    display: block;
+    @include border-left-radius(0);
+    @include border-top-radius(3px);
+    margin: 0 5%;
+    text-align: center;
+  }
+  input.button {
+    width: 90%;
+    display: block;
+    @include border-right-radius(0px);
+    @include border-bottom-radius(3px);
+    margin: 0 5%;
+  }
+}
