@@ -37,13 +37,20 @@ img::-moz-selection {
   @include box-sizing(border-box);
 }
 
+html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   margin: 0 auto;
   font-family: $fontFamily;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
-  color: $black;
-  background: $grayLightest;
+  color: $white;
 }
 
 input,
@@ -58,7 +65,9 @@ textarea {
 /* Headings */
 
 h1 {
-  @include font-size(4);
+  font-weight: 100;
+  margin: 100px 0 50px 0;
+  @include font-size(5);
 }
 
 h2 {
@@ -81,6 +90,12 @@ h6 {
   @include font-size(1.2);
 }
 
+hr {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* Links */
 
 a {
@@ -101,3 +116,5 @@ a {
 img {
   max-width: 100%;
 }
+
+

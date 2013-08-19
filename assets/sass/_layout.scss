@@ -7,41 +7,14 @@
 
 .container {
   @include outer-container;
-}
-
-.header-picture {
-  background: url(../img/bg.jpg);
-  height: 500px;
   text-align: center;
 }
 
 .logo {
-  width: 100px;
-  text-align: center;
-  display: inline;
-  padding-top: 25px;
-  float: left;
-  text-align: center;
-}
-
-.title-wrap {
+  width: 170px;
   display: inline-block;
   text-align: center;
-}
-
-.title-text {
-  display: inline;
+  position: relative;
   padding: 0;
-  @include font-size(3);
-  text-transform: uppercase;
-  color: $gray;
-  font-weight: 500;
-  float: left;
-  text-align: center;
-  p {
-    margin: 0;
-  }
-  span {
-    font-weight: 300;
-  }
+  margin: 0;
 }
