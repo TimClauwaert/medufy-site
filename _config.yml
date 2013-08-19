@@ -6,8 +6,8 @@ exclude: [".gitignore", "Gemfile", "Gemfile.lock", "README.md", "LICENSE.md", "s
 
 # Meta
 og:
-  image: path/to/img
-  title: title
-  url: url
-  name: name
-  description: description
+  image: /assets/img/logo.jpg
+  title: Vinocura
+  url: http://vinocura.com/
+  name: Vinocura
+  description: Vinocura will offer you an easy way to manage your wine collection anywhere and anytime. A no nonsense web application with focus on simplicity, ease of use and clarity.
