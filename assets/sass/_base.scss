@@ -91,7 +91,7 @@ h6 {
 }
 
 hr {
-  width: 50%;
+  width: 40%;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -101,6 +101,10 @@ p {
   font-weight: 300;
   padding: 0 50px;
   margin: 50px 0;
+}
+
+form {
+  display: inline;
 }
 
 /* Links */

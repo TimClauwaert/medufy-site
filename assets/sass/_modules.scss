@@ -32,3 +32,40 @@
 .invisible {
   visibility: hidden;
 }
+
+/* Forms
+   ========================================================================== */
+
+input.email {
+  padding: 1.3rem 3%;
+  width: 40%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: $grayLight;
+  @include border-left-radius(3px);
+  height: auto;
+  margin: 0;
+  display: inline-block;
+  font-family: $fontFamily;
+}
+
+input.button {
+  padding: 1.3rem 5%;
+  margin: 0;
+  background: $color;
+  text-transform: uppercase;
+  color: $white;
+  @include border-right-radius(3px);
+  @include transition(background 0.3s ease-in-out);
+  width: 20%;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  margin-left: -3px;
+  letter-spacing: 0.07rem;
+  &:hover {
+    background: $colorLight;
+    color: $white;
+  }
+}
