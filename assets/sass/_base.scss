@@ -111,10 +111,10 @@ form {
 
 a {
   text-decoration: none;
-  color: $gray;
-
+  color: $color;
   &:hover {
-    color: $grayDark;
+    color: $colorLight;
+    @include transition(color 0.3s ease-in-out);
   }
 
   &:active {
