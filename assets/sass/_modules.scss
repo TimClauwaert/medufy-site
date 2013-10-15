@@ -84,7 +84,7 @@ input.email {
   display: inline-block;
   font-family: $base-font-family;
   font-weight: 100;
-  background: transparent;
+  background: $gray-main;
   @include placeholder() {
     font-weight: 100;
     color: $gray-light;
@@ -93,7 +93,7 @@ input.email {
 }
 
 input.button {
-  background: transparent;
+  background: $gray-main;
   padding: 0px 0px 15px 0px;
   background: none;
   font-weight: 100;
