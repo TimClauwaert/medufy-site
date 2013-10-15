@@ -1,9 +1,9 @@
-/* ==========================================================================
-   Modules
-   ========================================================================== */
+// =============================================================================
+// Modules
+// =============================================================================
 
-/* Floats
-   ========================================================================== */
+// Floats
+// =============================================================================
 
 .clearfix {
   @include clearfix();
@@ -17,12 +17,11 @@
   float: right;
 }
 
-/* Toggle content
-   ========================================================================== */
+// Toggle content
+// =============================================================================
 
 .hide {
-  display: none !important;
-  visibility: hidden !important;
+  @include hide();
 }
 
 .show {
@@ -31,6 +30,32 @@
 
 .invisible {
   visibility: hidden;
+}
+
+@include breakpoint(medium) {
+  .hide-medium {
+    @include hide();
+  }
+}
+
+// Margins
+// =============================================================================
+
+.margin-top__big {
+  margin-top: 120px;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+
+// Typography
+// =============================================================================
+
+.lead {
+  @include font-size(1.5);
+  margin-bottom: 50px;
+  color: $blue;
 }
 
 /* Forms
@@ -42,12 +67,12 @@ input.email {
   border: none;
   outline: none;
   font-size: 1rem;
-  color: $grayLight;
+  color: $gray-light;
   @include border-left-radius(3px);
   height: auto;
   margin: 0;
   display: inline-block;
-  font-family: $fontFamily;
+  font-family: $base-font-family;
 }
 
 input.button {
@@ -65,7 +90,7 @@ input.button {
   margin-left: -3px;
   letter-spacing: 0.07rem;
   &:hover {
-    background: $colorLight;
+    background: $blue-light;
     color: $white;
   }
 }

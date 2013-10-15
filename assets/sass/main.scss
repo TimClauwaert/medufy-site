@@ -1,17 +1,14 @@
-/* Bourbon */
-@import "bourbon/bourbon";
-@import "neat/neat";
-
-/* Vendor */
+// Vendor
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
 @import "vendor/normalize";
-@import "vendor/font-awesome";
+@import "vendor/entypo";
 
-/* Settings */
+// Settings
 @import "variables";
 @import "mixins";
 
-/* SMACSS */
+// OO-SCSS
 @import "base";
 @import "layout";
 @import "modules";
-@import "states";

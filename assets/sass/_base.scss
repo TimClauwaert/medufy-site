@@ -1,56 +1,44 @@
-/* ==========================================================================
-   Base
-   ========================================================================== */
+// =============================================================================
+// Base
+// =============================================================================
 
-/* Selections
-   ========================================================================== */
+// Selections
+// =============================================================================
 
-::-moz-selection {
-  background: $color;
-  color: $white;
-  text-shadow: none;
-}
-
+::-moz-selection,
 ::selection {
-  background: $color;
+  background: $blue;
   color: $white;
   text-shadow: none;
 }
 
 ::selection:window-inactive {
-  background: $grayLight;
-  color: $gray;
+  background: $gray-light;
+  color: $base-font-color;
 }
 
-img::selection {
-  background: transparent;
-}
-
+img::selection,
 img::-moz-selection {
   background: transparent;
 }
 
-/* Typography
-   ========================================================================== */
+// Typography
+// =============================================================================
 
-* {
+*,
+*:before,
+*:after {
   @include box-sizing(border-box);
-}
-
-html {
-  background: url(../img/bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 body {
   margin: 0 auto;
-  font-family: $fontFamily;
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-  color: $white;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  background: $white;
 }
 
 input,
@@ -62,70 +50,89 @@ textarea {
   line-height: inherit;
 }
 
-/* Headings */
+p {
+  margin: 0;
+  font-weight: 300;
+  color: $base-font-color;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  line-height: 1.25em;
+}
 
 h1 {
+  @include font-size(3);
   font-weight: 100;
-  margin: 100px 0 50px 0;
-  @include font-size(5);
 }
 
 h2 {
   @include font-size(3);
+  color: $white;
+  font-weight: 100;
 }
 
 h3 {
-  @include font-size(2.5);
+  margin-bottom: 25px;
+  @include font-size(2);
+  font-weight: 100;
+  color: $gray-dark;
 }
 
 h4 {
+  margin-bottom: 50px;
   @include font-size(2);
+  font-weight: 100;
 }
 
 h5 {
-  @include font-size(1.6);
+  @include font-size(1.2);
+  font-weight: 500;
+  color: $gray;
 }
 
 h6 {
-  @include font-size(1.2);
-}
-
-hr {
-  width: 40%;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-p {
-  @include font-size(1.2);
+  @include font-size(.8);
+  color: $gray-light;
   font-weight: 300;
-  padding: 0 50px;
-  margin: 50px 0;
 }
 
-form {
-  display: inline;
-}
-
-/* Links */
+// Links
 
 a {
+  @include transition(color 0.1s linear);
+  color: $base-accent-color;
   text-decoration: none;
-  color: $color;
+  font-weight: 300;
+
   &:hover {
-    color: $colorLight;
-    @include transition(color 0.3s ease-in-out);
+    color: $base-accent-highlighted-color;
   }
 
-  &:active {
+  &:active, &:focus {
+    color: $base-accent-highlighted-color;
     outline: none;
   }
 }
 
-/* Images */
+// Other
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-line-height 0;
+}
 
 img {
   max-width: 100%;
+  margin: 0;
+  display: block;
 }
-
-

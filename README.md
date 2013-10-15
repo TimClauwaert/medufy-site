@@ -1,9 +1,9 @@
-Vinocura
-========
+Medufy
+======
 
-*Landing page for Vinocura*
+*Landing page for Medufy*
 
-http://vinocura.com/
+http://medufy.com/
 
 ## Usage
 

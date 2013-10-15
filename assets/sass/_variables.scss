@@ -1,31 +1,81 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
+// =============================================================================
+// Variables
+// =============================================================================
 
-/* Layout */
+// Layout
+// =============================================================================
 
 $column: 90px;
-$gutter: 30px;
+$gutter: 50px;
 $grid-columns: 12;
+$min-width: 1024px;
 
-/* Colors */
+// Responsive
+// =============================================================================
 
+$small: "max-width: 767px"; // Smartphone
+$medium: "max-width: 1024px"; // Tablets
+$large: "max-width: 1223px"; // Small desktop screens
+
+// Colors
+// =============================================================================
+
+// Shades of gray
 $black: #000;
-$grayDarker: #222;
-$grayDark: #333;
-$gray: #555;
-$grayLight: #999;
-$grayLighter: #eee;
-$grayLightest: lighten($grayLighter, 7%);
-$white: #fff;
+$gray-darkest: #191c1f;
+$gray-darker: #353d47;
+$gray-dark: #333;
+$gray: #7d7d7d;
+$gray-light: #b6b8bb;
+$gray-lighter: #c7cacc;
+$gray-lightest: #f4f4f4;
+$white: #ffffff;
 
-$colorLight: #70d4ad;
-$color: #53c599;
+$gray-main: #fdfdfd;
 
-/* Typography */
+// Colors
+$blue-lighter: #69bee5;
+$blue-light: #1DA7E6;
+$blue: #1b9ed9;
+$blue-dark: #137099;
+$blue-darkest: #0B4159;
 
-$baseFontSize: 14px;
-$baseLineHeight: 1.42857142857; // 20/14
-$BaseLineHeightComputed: floor($baseFontSize * $baseLineHeight);
-$fontFamily: 'Lato', sans-serif;
-$fontFamilySerif: serif;
+$green-light: #eaf0ee;
+$green: #4aba8e;
+$green-dark: #44a680;
+
+$red-lightest: #f3e6e6;
+$red: #dc6e6e;
+$red-dark: #b14545;
+
+$orange: #eba83e;
+
+// Font Colors
+$base-font-color: $gray;
+$base-accent-color: $blue;
+$base-accent-highlighted-color: $blue-dark;
+
+// Borders
+$base-border-color: $gray-lighter;
+$base-border-radius: 3px;
+
+// Typography
+// =============================================================================
+
+$base-font-size: 14px;
+$base-line-height: 1.42857142857; // 20/14
+$base-font-family: "museo-sans", Museo Sans, sans-serif;
+$base-font-family-serif: Courier, serif;
+
+// Forms
+// =============================================================================
+
+$form-placeholder-color: darken($gray-lighter, 5%);
+$form-border-color: $base-border-color;
+$form-border-color-hover: $blue;
+$form-border-color-focus: $blue;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: none;
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: 1;
+$form-font-family: $base-font-family;

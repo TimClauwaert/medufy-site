@@ -1,50 +1,18 @@
-/* ==========================================================================
-   Mixins
-   ========================================================================== */
+// =============================================================================
+// Mixins
+// =============================================================================
 
-/* px fallback font for rem */
+// General
+// =============================================================================
+
+// px fallback font for rem
 
 @mixin font-size($val) {
   font-size: ($val * 10) + px;
   font-size: $val + rem;
 }
 
-/* Handling breakpoints for media queries */
-
-@mixin breakpoint($point) {
-  // Small screen / tablets
-  @if $point == small {
-    @media (max-width: 991px) {
-      @content
-    }
-  }
-  // Medium screen / desktop
-  @else if $point == medium {
-    @media (min-width: 992px) {
-      @content
-    }
-  }
-  // Lardge screen / wide desktop
-  @else if $point == large {
-    @media (min-width: 1200px) {
-      @content
-    }
-  }
-}
-
-/* Handling images for Retina, example: +at2x(name-image, 20px, 20px) */
-
-@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') {
-  background-image: image-url($image_name + $extention);
-  $x2img : $image_name + '@2x' + $extention;
-
-  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
-    background-image: image-url($x2img);
-    background-size: $w $h;
-  }
-}
-
-/* Clearfix */
+// Clearfix
 
 @mixin clearfix() {
   &:before,
@@ -54,5 +22,32 @@
   }
   &:after {
     clear: both;
+  }
+}
+
+// Hide
+
+@mixin hide() {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// Handling breakpoints for media queries
+
+@mixin breakpoint($val) {
+  @if $val == small {
+    @media ($small) {
+      @content;
+    }
+  }
+  @else if $val == medium {
+    @media ($medium) {
+      @content;
+    }
+  }
+  @else if $val == large {
+    @media ($large) {
+      @content;
+    }
   }
 }

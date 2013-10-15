@@ -10,7 +10,7 @@ layout: nil
           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>http://vinocura.com</loc>
+    <loc>http://medufy.com</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
