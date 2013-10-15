@@ -1,3 +1,69 @@
 // =============================================================================
 // Layout
 // =============================================================================
+
+.container {
+  @include outer-container;
+
+  article {
+    @include span-columns(6);
+    text-align: center;
+    p {
+      text-align: left;
+      @include font-size(1.2);
+      margin-top: 50px;
+    }
+    b {
+      display: block;
+    }
+  }
+  .omega {
+    @include omega();
+  }
+}
+
+header {
+  background: url(../img/bg.jpg) no-repeat 50% 0%;
+  background-size: cover;
+  height: 100%;
+  min-height: 500px;
+  width: 100%;
+  z-index: 600;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 200px;
+  opacity: .9;
+  left: 50%;
+  @include transform(translateX(-62.5px));
+  box-shadow: -2px 2px 5px .8 $gray-darker;
+  width: 125px;
+  @include transition(all .3s ease-in-out);
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+section {
+  text-align: center;
+  padding: 200px 0;
+
+  &.blue {
+    background: $blue-lighter;
+    h2, p {
+      color: $gray-main;
+    }
+
+  }
+
+  &.picture {
+    background: url(../img/bg-blue.jpg) no-repeat center 40%;
+    background-size: cover;
+  }
+}
