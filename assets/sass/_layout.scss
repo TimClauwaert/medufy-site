@@ -36,18 +36,13 @@ header {
 }
 
 .logo {
+  @include transition(all .3s ease-in-out);
   position: absolute;
   top: 200px;
-  opacity: .9;
   left: 50%;
-  @include transform(translateX(-62.5px));
-  box-shadow: -2px 2px 5px .8 $gray-darker;
+  margin-left: -62.5px;
   width: 125px;
-  @include transition(all .3s ease-in-out);
-
-  &:hover {
-    box-shadow: none;
-  }
+  @include animation(fadeInDown .7s linear);
 }
 
 section {
@@ -55,15 +50,21 @@ section {
   padding: 200px 0;
 
   &.blue {
-    background: $blue-lighter;
+    background: $gray-darker;
     h2, p {
       color: $gray-main;
     }
-
   }
+}
 
-  &.picture {
-    background: url(../img/bg-blue.jpg) no-repeat center 40%;
-    background-size: cover;
+footer {
+  text-align: center;
+  padding: 200px 0;
+  background: url(../img/bg-blue.jpg) no-repeat center 40%;
+  background-size: cover;
+  p {
+      @include font-size(1.5);
+      margin: 50px 0;
+      color: $gray;
   }
 }

@@ -58,7 +58,8 @@
   color: $gray-light;
 }
 
-.icon-heart-empty {
+.icon-heart-empty,
+.icon-direction {
   color: $blue;
   @include font-size(3);
 }
@@ -71,39 +72,40 @@ form {
 }
 
 input.email {
- padding: 28px 30px 25px 30px;
-  width: 450px;
-  border: 1px solid $gray-light;
+  padding: 0px 0px 15px 0px;
+  @include font-size(2);
+  width: 442px;
+  border: none;
+  border-bottom: 1px solid $gray-lighter;
   outline: none;
-  font-size: 1rem;
   color: $gray-light;
-  border-radius: 3px;
   height: auto;
   margin: 0;
   display: inline-block;
   font-family: $base-font-family;
-  font-weight: 400;
+  font-weight: 100;
   @include placeholder() {
-    font-weight: 300;
+    font-weight: 100;
     color: $gray-light;
+    @include font-size(2);
   }
 }
 
 input.button {
-  padding: 32px 40px 27px 40px;
-  margin: 0;
-  background: $blue-lighter;
-  text-transform: uppercase;
-  color: $white;
-  border-radius: 3px;
-  @include transition(background 0.3s ease-in-out);
-  display: inline-block;
+  padding: 0px 0px 15px 0px;
+  background: none;
+  font-weight: 100;
+  color: $blue-lighter;
   border: none;
-  @include font-size(.8);
-  letter-spacing: 0.07rem;
+  border-bottom: 1px solid $gray-lighter;
+  @include font-size(2);
+  @include transition(all 0.3s ease-in-out);
+  display: inline-block;
+  margin-left: -4px;
+
   &:hover {
-    background: $blue-light;
-    color: $white;
+    color: $blue;
+    border-bottom: 1px solid $blue;
   }
 }
 

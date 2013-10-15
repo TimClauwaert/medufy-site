@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  @include animation(fadeInDown .7s linear);
   @include font-size(3);
   font-weight: 500;
   margin-top: 400px;
@@ -88,7 +89,7 @@ h2 {
 h3 {
   @include font-size(4.5);
   font-weight: 100;
-  color: $gray-darker;
+  color: $gray-dark;
 }
 
 h4 {

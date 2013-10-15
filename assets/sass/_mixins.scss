@@ -51,3 +51,16 @@
     }
   }
 }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    @include transform(translateY(-10px));
+    opacity: .3;
+    color: $gray-light;
+  }
+  100% {
+    @include transform(translateY(0px));
+    opacity: 1;
+    color: $white;
+  }
+}
