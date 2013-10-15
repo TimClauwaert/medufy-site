@@ -12,6 +12,7 @@
       text-align: left;
       @include font-size(1.2);
       margin-top: 50px;
+      color: $gray-lighter!important;
     }
     b {
       display: block;
