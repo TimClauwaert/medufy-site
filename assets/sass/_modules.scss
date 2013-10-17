@@ -67,64 +67,102 @@
 /* Forms
    ========================================================================== */
 
-form {
-  margin-top: 50px;
-}
-
 input.email {
-  padding: 0px 0px 15px 0px;
-  @include font-size(2);
-  width: 442px;
-  border: none;
-  border-bottom: 1px solid $gray-lighter;
+  padding: 20px;
+  width: 375px;
+  border: 1px solid $gray;
+  border-radius: $base-border-radius;
   outline: none;
   color: $gray-light;
   height: auto;
   margin: 0;
   display: inline-block;
   font-family: $base-font-family;
-  font-weight: 100;
+  font-weight: 300;
   background: $gray-main;
   @include placeholder() {
-    font-weight: 100;
+    font-weight: 300;
     color: $gray-light;
-    @include font-size(2);
+  }
+  &:focus {
+    border-color: $blue-lighter;
+    outline: none;
   }
 }
 
 input.button {
-  background: $gray-main;
-  padding: 0px 0px 15px 0px;
-  background: none;
-  font-weight: 100;
-  color: $blue-lighter;
+  background: $blue;
+  padding: 20px 30px;
+  font-weight: 300;
+  color: $white;
   border: none;
-  border-bottom: 1px solid $gray-lighter;
-  @include font-size(2);
-  @include transition(all 0.3s ease-in-out);
+  @include transition(background 0.3s ease-in-out);
   display: inline-block;
-  margin-left: -4px;
+  border-radius: $base-border-radius;
 
   &:hover {
-    color: $blue;
-    border-bottom: 1px solid $blue;
+    color: $white;
+    background: $blue-dark;
   }
 }
 
-@include breakpoint(small) {
-  input.email {
-    width: 90%;
-    display: block;
-    @include border-left-radius(0);
-    @include border-top-radius(3px);
-    margin: 0 5%;
-    text-align: center;
+/* Captions
+   ========================================================================== */
+
+.caption {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: #000;
+
+  &.last {
+    margin-bottom: 0;
   }
-  input.button {
-    width: 90%;
+
+  img {
+    @include transition(opacity 0.3s ease-in-out);
     display: block;
-    @include border-right-radius(0px);
-    @include border-bottom-radius(3px);
-    margin: 0 5%;
+    max-width: 100%;
+  }
+
+  &:hover img {
+    opacity: 0.5;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    color: $white;
+    z-index: 1;
+    @include transition(all 0.3s ease-in-out);
+  }
+
+  &::after {
+    @include transform(translateY(-100%));
+    top: 0;
+    padding: 90px 0;
+    content: attr(data-title);
+    @include font-size(3);
+    font-weight: 100;
+    background: $gray-darker;
+  }
+
+  &::before {
+    @include transform(translateY(100%));
+    top: 50%;
+    padding: 50px 30px;
+    @include font-size(1);
+    content: attr(data-description);
+    background: $gray-lightest;
+    color: $gray;
+  }
+
+  &:hover::after,
+  &:hover::before {
+    @include transform(translateY(0%));
   }
 }
