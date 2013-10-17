@@ -11,6 +11,8 @@
 
   article {
     @include span-columns(6);
+    display: block;
+    position: relative;
   }
   .omega {
     @include omega();

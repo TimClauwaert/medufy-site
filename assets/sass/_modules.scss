@@ -79,6 +79,7 @@ input.button {
   margin-bottom: 20px;
   overflow: hidden;
   background: #000;
+  display: block;
 
   &.last {
     margin-bottom: 0;
@@ -86,7 +87,6 @@ input.button {
 
   img {
     @include transition(opacity 0.3s ease-in-out);
-    display: block;
     max-width: 100%;
   }
 
