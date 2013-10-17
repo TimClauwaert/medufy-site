@@ -69,6 +69,12 @@ header {
   }
 }
 
+@include breakpoint(small) {
+  .btn-subscribe {
+    margin-top: 50px;
+  }
+}
+
 // Main
 // =============================================================================
 

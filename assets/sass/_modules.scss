@@ -2,88 +2,28 @@
 // Modules
 // =============================================================================
 
-// Floats
+// Forms
 // =============================================================================
-
-.clearfix {
-  @include clearfix();
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
-// Toggle content
-// =============================================================================
-
-.hide {
-  @include hide();
-}
-
-.show {
-  display: block !important;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-@include breakpoint(medium) {
-  .hide-medium {
-    @include hide();
-  }
-}
-
-// Margins
-// =============================================================================
-
-.margin-top__big {
-  margin-top: 120px;
-}
-
-.margin-top {
-  margin-top: 50px;
-}
-
-// Typography
-// =============================================================================
-
-.lead {
-  @include font-size(1.5);
-  margin: 50px 0;
-  color: $gray-light;
-}
-
-.icon-heart-empty,
-.icon-direction {
-  color: $blue;
-  @include font-size(3);
-}
-
-/* Forms
-   ========================================================================== */
 
 input.email {
-  padding: 20px;
+  display: inline-block;
   width: 375px;
+  height: auto;
+  padding: 20px;
   border: 1px solid $gray;
   border-radius: $base-border-radius;
-  outline: none;
-  color: $gray-light;
-  height: auto;
   margin: 0;
-  display: inline-block;
+  outline: none;
   font-family: $base-font-family;
   font-weight: 300;
+  color: $gray-light;
   background: $gray-main;
+
   @include placeholder() {
     font-weight: 300;
     color: $gray-light;
   }
+
   &:focus {
     border-color: $blue-lighter;
     outline: none;
@@ -91,14 +31,14 @@ input.email {
 }
 
 input.button {
-  background: $blue;
-  padding: 20px 30px;
-  font-weight: 300;
-  color: $white;
-  border: none;
   @include transition(background 0.3s ease-in-out);
   display: inline-block;
+  padding: 20px 30px;
+  border: none;
   border-radius: $base-border-radius;
+  background: $blue;
+  font-weight: 300;
+  color: $white;
 
   &:hover {
     color: $white;
@@ -106,8 +46,32 @@ input.button {
   }
 }
 
-/* Captions
-   ========================================================================== */
+@include breakpoint(medium) {
+  input.email {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  input.button {
+    width: 90%;
+    margin: 10px 5% 0 5%;
+  }
+}
+
+@include breakpoint(small) {
+  input.email {
+    width: 100%;
+    margin: 0;
+  }
+
+  input.button {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+}
+
+// Captions
+// =============================================================================
 
 .caption {
   position: relative;
@@ -164,5 +128,21 @@ input.button {
   &:hover::after,
   &:hover::before {
     @include transform(translateY(0%));
+  }
+}
+
+@include breakpoint(medium) {
+  .caption {
+    &.last {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include breakpoint(small) {
+  .caption {
+    &.last {
+      margin-bottom: 20px;
+    }
   }
 }
