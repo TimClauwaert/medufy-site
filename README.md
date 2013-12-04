@@ -3,8 +3,6 @@ Medufy
 
 *Landing page for Medufy*
 
-http://medufy.com/
-
 ## Usage
 
 Set up your environment.
